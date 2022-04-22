@@ -18,7 +18,7 @@ namespace Download_CustomVision_TrainingImages
             {
                 client.DefaultRequestHeaders.Add("Training-key", trainingKey);
                 var skipp = 0; //leave this at 0
-                var TotalImages = 0; //change this to the number of images in your training set
+                var TotalImages = 0; //change this to the number of images in your training set +256
                 while (skipp < TotalImages)
                 {
                     var uri = $"https://{endPoint}.cognitiveservices.azure.com/customvision/v3.0/training/projects/{projectId}/images/tagged?iterationId={iterationId}&take=256&skip={skipp}";
